@@ -1,0 +1,29 @@
+{
+  "name": "vtree-kup",
+  "version": "0.0.1",
+  "description": "CoffeeKup like DSL for building virtual-dom tree",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanchas116/vtree-kup.git"
+  },
+  "author": "Ryohei Ikegami <iofg2100@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanchas116/vtree-kup/issues"
+  },
+  "homepage": "https://github.com/seanchas116/vtree-kup",
+  "dependencies": {
+    "vtree": "0.0.21"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
+}
