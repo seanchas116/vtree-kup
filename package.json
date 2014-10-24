@@ -2,10 +2,10 @@
   "name": "vtree-kup",
   "version": "0.0.1",
   "description": "CoffeeKup like DSL for building virtual-dom tree",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "coffee -c index.coffee"
+    "build": "coffee -o lib -c src/index.coffee"
   },
   "repository": {
     "type": "git",
