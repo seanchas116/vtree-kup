@@ -4,6 +4,7 @@
   "description": "CoffeeKup like DSL for building virtual-dom tree",
   "main": "lib/index.js",
   "scripts": {
+    "pretest": "coffee -o lib -c src/index.coffee",
     "test": "mocha",
     "build": "coffee -o lib -c src/index.coffee"
   },

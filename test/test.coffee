@@ -1,5 +1,5 @@
 assert = (require 'chai').assert
-vtreeKup = require '../src/index'
+vtreeKup = require '../lib/index'
 VNode = require 'vtree/vnode'
 VText = require 'vtree/vtext'
 
