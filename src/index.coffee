@@ -4,7 +4,7 @@ VNode = require 'vtree/vnode'
 VText = require 'vtree/vtext'
 extend = require 'xtend/mutable'
 
-keys = '
+tags = '
   html head title base link meta style script noscript template body body
   section nav article aside h1 h2 h3 h4 h5 h6 header footer
   address main p hr pre blockquote ol ul li dl dt dd dd figure figcaption div a
@@ -77,11 +77,11 @@ class VTreeKup
 
     topNodes.push new VNode(name, properties, children, null, @namespace)
 
-  @addKey: (key) ->
-    @::[key] = (args...) -> @$tag(key, args...)
+  @addTag: (tag) ->
+    @::[tag] = (args...) -> @$tag(tag, args...)
 
-for key in keys
-  VTreeKup.addKey key
+for tag in tags
+  VTreeKup.addTag tag
 
 vtreeKup = (block) ->
   k = new VTreeKup(null)
@@ -91,7 +91,7 @@ vtreeKup = (block) ->
   #  throw new Error('cannot create multiple root nodes')
   nodes[0]
 
-vtreeKup.addKey = (key) ->
-  VTreeKup.addKey key
+vtreeKup.addTag = (tag) ->
+  VTreeKup.addTag tag
 
 module.exports = vtreeKup
