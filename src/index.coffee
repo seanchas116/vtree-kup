@@ -50,7 +50,10 @@ class VTreeKup
   topNodes: ->
     @nodesStack[@nodesStack.length - 1]
 
-  tag: (name, args...) ->
+  $vtree: (tree) ->
+    @topNodes().push tree
+
+  $tag: (name, args...) ->
     children = []
     properties = {}
     text = null
@@ -75,7 +78,7 @@ class VTreeKup
     topNodes.push new VNode(name, properties, children, null, @namespace)
 
   @addKey: (key) ->
-    @::[key] = (args...) -> @tag(key, args...)
+    @::[key] = (args...) -> @$tag(key, args...)
 
 for key in keys
   VTreeKup.addKey key

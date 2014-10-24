@@ -40,3 +40,8 @@ describe 'vtreeKup', ->
     actual = vtreeKup (k) ->
       k.div 'piyo', (-> k.span 'hoge'), 'foo'
     assert.deepEqual actual, expected
+
+  it 'can insert virtual-dom nodes directly', ->
+    actual = vtreeKup (k) ->
+      k.$vtree new VNode('div')
+    assert.deepEqual actual, new VNode('div')
