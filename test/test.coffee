@@ -27,6 +27,16 @@ describe 'vtreeKup', ->
     ]
     actual = vtreeKup (k) ->
       k.div '.root', style: {width: '100px'}, ->
-        k.p 'hoge'
+        k.p 'hoge', ->
         k.button '#button1', 'click me'
-    assert.deepEqual expected, actual
+    assert.deepEqual actual, expected
+
+  it 'generates', ->
+    expected = new VNode 'div', {}, [
+      new VText('piyo')
+      new VNode('span', {}, [new VText 'hoge'])
+      new VText('foo')
+    ]
+    actual = vtreeKup (k) ->
+      k.div 'piyo', (-> k.span 'hoge'), 'foo'
+    assert.deepEqual actual, expected

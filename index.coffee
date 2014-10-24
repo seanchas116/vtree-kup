@@ -21,6 +21,11 @@ parseSelector = (selector) ->
   id = null
 
   splits = selector.split(/([.#])/)
+
+  # does not start with /[.#]/
+  if splits[0].length > 0
+    return null
+
   i = 1
   while i < splits.length
     switch splits[i]
@@ -49,24 +54,25 @@ class VTreeKup
     children = []
     properties = {}
     text = null
+    topNodes = @topNodes()
+
     for arg, i in args
       switch typeof arg
         when 'function'
           @nodesStack.push []
           arg()
-          children = @nodesStack.pop()
+          children.push @nodesStack.pop()...
         when 'object'
           extend properties, arg
         when 'number', 'boolean'
-          text = String(arg)
+          children.push new VText(String(arg))
         when 'string'
-          if args.length != 1 && i == 0
-            extend properties, parseSelector(arg)
+          if args.length != 1 && i == 0 && (classId = parseSelector(arg))?
+            extend properties, classId
           else
-            text = arg
-    if text?
-      children.push new VText(text)
-    @topNodes().push new VNode(name, properties, children, null, @namespace)
+            children.push new VText(arg)
+
+    topNodes.push new VNode(name, properties, children, null, @namespace)
 
   @addKey: (key) ->
     @::[key] = (args...) -> @tag(key, args...)
