@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "description": "CoffeeKup like DSL for building virtual-dom tree",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "mocha"
+    "test": "coffee test.coffee"
   },
   "repository": {
     "type": "git",
@@ -23,7 +20,7 @@
     "vtree": "0.0.21"
   },
   "devDependencies": {
-    "chai": "^1.9.2",
-    "mocha": "^2.0.1"
+    "coffee-script": "^1.8.0",
+    "tape": "^3.0.1"
   }
 }
