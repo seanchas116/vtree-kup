@@ -3,7 +3,7 @@ vtreeKup = require '../lib/index'
 VNode = require 'vtree/vnode'
 VText = require 'vtree/vtext'
 
-describe 'vtreeKup', ->
+describe 'VTreeKup', ->
 
   it 'generates node', ->
     actual = vtreeKup (k) ->
@@ -31,7 +31,7 @@ describe 'vtreeKup', ->
         k.button '#button1', 'click me'
     assert.deepEqual actual, expected
 
-  it 'generates', ->
+  it 'can generate inline elements easily', ->
     expected = new VNode 'div', {}, [
       new VText('piyo')
       new VNode('span', {}, [new VText 'hoge'])
@@ -41,7 +41,9 @@ describe 'vtreeKup', ->
       k.div 'piyo', (-> k.span 'hoge'), 'foo'
     assert.deepEqual actual, expected
 
-  it 'can insert virtual-dom nodes directly', ->
-    actual = vtreeKup (k) ->
-      k.$vtree new VNode('div')
-    assert.deepEqual actual, new VNode('div')
+  describe '#$vtree', ->
+
+    it 'inserts virtual-dom nodes directly', ->
+      actual = vtreeKup (k) ->
+        k.$vtree new VNode('div')
+      assert.deepEqual actual, new VNode('div')
