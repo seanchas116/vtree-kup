@@ -20,11 +20,11 @@ parseSelector = (selector) ->
   classes = []
   id = null
 
-  splits = selector.split(/([.#])/)
+  first = selector[0]
+  unless first == '.' || first == '#'
+    return
 
-  # does not start with /[.#]/
-  if splits[0].length > 0
-    return null
+  splits = selector.split(/([.#])/)
 
   i = 1
   while i < splits.length
