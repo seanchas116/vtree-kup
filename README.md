@@ -1,6 +1,8 @@
 vtree-kup
 =========
 
+[![Build Status](https://travis-ci.org/seanchas116/vtree-kup.svg)](https://travis-ci.org/seanchas116/vtree-kup)
+
 vtree-kup provides [CoffeeKup](https://github.com/mauricemach/coffeekup)-like DSL for building [virtual-dom](https://github.com/Matt-Esch/virtual-dom) tree.
 
 Installation
