@@ -37,7 +37,7 @@ parseSelector = (selector) ->
 
   result = {}
   if classes.length > 0
-    result.class = classes.join(' ')
+    result.className = classes.join(' ')
   if id?
     result.id = id
   result

@@ -18,10 +18,10 @@ describe 'VTreeKup', ->
   it 'generates node with class/id', ->
     actual = vtreeKup (k) ->
       k.div '.hoge.piyo#foo', 'text'
-    assert.deepEqual actual, new VNode('div', {class: 'hoge piyo', id: 'foo'}, [new VText('text')])
+    assert.deepEqual actual, new VNode('div', {className: 'hoge piyo', id: 'foo'}, [new VText('text')])
 
   it 'generates node with cildren', ->
-    expected = new VNode 'div', {class: 'root', style: {width: '100px'} }, [
+    expected = new VNode 'div', {className: 'root', style: {width: '100px'} }, [
       new VNode 'p', {}, [new VText 'hoge']
       new VNode 'button', {id: 'button1'}, [new VText 'click me']
     ]
