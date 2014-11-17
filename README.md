@@ -30,7 +30,7 @@ A string is used to specify classes and an id for the element
 if it is the first argument and valid as a selector.
 
 ```coffeescript
-.h1 '.title#counter-title', 'Counter'
+k.h1 '.title#counter-title', 'Counter'
 ```
 
 ### Inline elements
@@ -48,15 +48,10 @@ k.$add new VNode('p', {}, [new VText(String(counter.value))])
 k.button { onclick: -> counter.increment() }, 'Increment'
 ```
 
-### Add a new tag
-
-```coffeescript
-vtreeKup = require 'vtree-kup'
-vtreeKup.addTag 'tweet-button'
-```
 Todo
 ---------
 
+* Add new tags (for custom elements)
 * Namespace support (SVG, MathML)
 * Publish to npm
 * Browser tests
