@@ -50,8 +50,11 @@ class VTreeKup
   topNodes: ->
     @nodesStack[@nodesStack.length - 1]
 
-  $vtree: (tree) ->
-    @topNodes().push tree
+  $add: (items) ->
+    unless Array.isArray items
+      items = [items]
+    for item in items
+      @topNodes().push item
 
   $tag: (name, args...) ->
     children = []
