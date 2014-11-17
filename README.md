@@ -43,6 +43,7 @@ k.div 'This is an', (-> k.span '.is-important' 'important'), 'element'
 
 ```coffeescript
 k.h1 'Counter'
+# #$add accepts both an array and a node
 k.$add new VNode('p', {}, [new VText(String(counter.value))])
 k.button { onclick: -> counter.increment() }, 'Increment'
 ```
