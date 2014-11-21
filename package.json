@@ -27,7 +27,7 @@
     "mocha": "^2.0.1"
   },
   "peerDependencies": {
-    "virtual-dom": "0.0.22"
+    "vtree": "0.0.22"
   },
   "directories": {
     "test": "test"
