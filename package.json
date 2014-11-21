@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/seanchas116/vtree-kup",
   "dependencies": {
-    "vtree": "0.0.21",
+    "vtree": "0.0.22",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
