@@ -24,7 +24,8 @@
   "devDependencies": {
     "chai": "^1.9.2",
     "coffee-script": "^1.8.0",
-    "mocha": "^2.0.1"
+    "mocha": "^2.0.1",
+    "vtree": "0.0.22"
   },
   "peerDependencies": {
     "vtree": "0.0.22"
@@ -44,6 +45,6 @@
       "ipad/latest",
       "android-browser/latest"
     ],
-    "harness" : "mocha"
+    "harness": "mocha"
   }
 }
