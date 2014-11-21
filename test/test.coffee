@@ -41,6 +41,13 @@ describe 'VTreeKup', ->
       k.div 'piyo', (-> k.span 'hoge'), 'foo'
     assert.deepEqual actual, expected
 
+  it 'throws error if more than 1 element added to root', ->
+    wrong = ->
+      vtreeKup (k) ->
+        k.div()
+        k.div()
+    assert.throws(wrong, Error)
+
   describe '#$add', ->
 
     it 'inserts a virtual-dom node', ->

@@ -90,8 +90,8 @@ vtreeKup = (block) ->
   k = new VTreeKup(null)
   block(k)
   nodes = k.topNodes()
-  #if nodes.length >= 2
-  #  throw new Error('cannot create multiple root nodes')
+  if nodes.length >= 2
+    throw new Error('cannot create multiple root nodes')
   nodes[0]
 
 vtreeKup.addTag = (tag) ->
