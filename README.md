@@ -1,6 +1,7 @@
 vtree-kup
 =========
 
+[![npm version](https://badge.fury.io/js/vtree-kup.svg)](http://badge.fury.io/js/vtree-kup)
 [![Build Status](https://travis-ci.org/seanchas116/vtree-kup.svg)](https://travis-ci.org/seanchas116/vtree-kup)
 
 vtree-kup provides [CoffeeKup](https://github.com/mauricemach/coffeekup)-like DSL for building [virtual-dom](https://github.com/Matt-Esch/virtual-dom) tree.
@@ -8,7 +9,7 @@ vtree-kup provides [CoffeeKup](https://github.com/mauricemach/coffeekup)-like DS
 Installation
 ---------
 
-TODO
+    $ npm install vtree-kup
 
 Usage
 ---------
@@ -53,5 +54,4 @@ Todo
 
 * Add new tags (for custom elements)
 * Namespace support (SVG, MathML)
-* Publish to npm
 * Browser tests
