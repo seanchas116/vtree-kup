@@ -1,6 +1,6 @@
 {
   "name": "vtree-kup",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CoffeeKup like DSL for building virtual-dom tree",
   "main": "lib/index.js",
   "scripts": {
