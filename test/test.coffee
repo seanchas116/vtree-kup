@@ -1,7 +1,7 @@
 assert = (require 'chai').assert
 vtreeKup = require '../lib/index'
-VNode = require 'vtree/vnode'
-VText = require 'vtree/vtext'
+VNode = require 'virtual-dom/vnode/vnode'
+VText = require 'virtual-dom/vnode/vtext'
 
 describe 'VTreeKup', ->
 

@@ -1,7 +1,7 @@
 'use strict'
 
-VNode = require 'vtree/vnode'
-VText = require 'vtree/vtext'
+VNode = require 'virtual-dom/vnode/vnode'
+VText = require 'virtual-dom/vnode/vtext'
 extend = require 'xtend/mutable'
 
 tags = '
